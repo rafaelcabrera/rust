@@ -1,5 +1,4 @@
 fn main() {
-    println!("Hello, world!");
     let mut my_arr: Vec<String> = Vec::new();
 
     my_arr.push("¡Bienvenido".to_string());
