@@ -1,3 +1,5 @@
+use diesel::prelude::*;
+
 #[derive(Queryable)]
 pub struct Post {
     pub id: i32,
@@ -8,7 +10,7 @@ pub struct Post {
 
 use super::schema::posts;
 #[derive(Insertable)]
-#[diesel(table_name = "posts")]
+#[table_name="posts"]
 pub struct NewPost<'a> {
     pub title: &'a str,
     pub body: &'a str,
